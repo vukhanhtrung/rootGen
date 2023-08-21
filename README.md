@@ -8,7 +8,8 @@ So what do we gain by grouping game constants to header for multiple turns data 
 
 
 ```PHP
-# No header:
+# No header: We will have to repeat the game constants with every turn saved.
+
 Turn 1:
     f ep CAPD - FMRRRFMFMRMF - - - v[DI, 3P]
     # Turn 1 Faction data
@@ -23,11 +24,11 @@ Turn 3:
     # Turn 3 Clearing data
 
 ```
-We will have to repeat the game constants with every turn saved.
+
 
 
 ```PHP
-# With header:
+# With header: We only need to store the game constants once.
 f ep CAPD - FMRRRFMFMRMF - - - v[DI, 3P]
 Turn 1:
     # Turn 1 Faction data
