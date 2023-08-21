@@ -5,7 +5,7 @@
 
 But you're ok with repeating the whole game setting header everytime?
 The position in your example
-```PHP
+```PYTHON
 f ep v[]
 
 C 23 Z[%be %b %h] h[3] 
