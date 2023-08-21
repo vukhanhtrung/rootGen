@@ -5,7 +5,7 @@
 
 But you're ok with repeating the whole game setting header everytime?
 The position in your example
-```
+```PHP
 f ep v[]
 
 C 23 Z[%be %b %h] h[3] 
@@ -33,6 +33,9 @@ dis[F#%b R#p M#@ B#@  B#D]
 12F w[1A] b[Af] t[As]
 ```
 would be encoded
-```HTML
+```PHP
+# Game Constants
+Map: Fall
+Deck: E&P
 
 ```
