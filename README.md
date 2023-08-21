@@ -72,3 +72,6 @@ Symbol | meaning
 -|-
 11FRFe | 11: clearing 11 <br> F: Fox suit <br> R: Ruin<br> Fe: Ferry used
 C2Sw | C: Cat <br> 2: 2 warriors <br> S: Sawmill <br> w: wood token
+
+## 2. Faction grouped data vs Piece-type grouped data:
+WIP
