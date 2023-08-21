@@ -4,7 +4,8 @@
 For 1 position, header or no header are practically the same thing. 
 So what do we gain by grouping game constants to header for multiple turns data encoding?
 
-Game constants we consider for simplicity: Map-name, map-suit, factions, deck, variant
+- Game constants we consider for simplicity: Map-name, map-suit, factions, deck, variant
+
 No header:
 ```PHP
 Turn 1:
