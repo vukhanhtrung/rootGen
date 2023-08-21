@@ -1,9 +1,10 @@
 # Suggestions for RootGen v0.2
 ## 1. Game data Header
 ### 1.1 What we gain?
-For 1 position, header or no header are practically the same thing. So what do we gain by grouping game constants to header?
+For 1 position, header or no header are practically the same thing. 
+So what do we gain by grouping game constants to header for multiple turns data encoding?
 
-Game constants: Map name, map suit, deck, variant
+Game constants we consider for simplicity: Map-name, map-suit, factions, deck, variant
 No header:
 ```PHP
 Turn 1:
@@ -52,28 +53,22 @@ Gamemode[DI,3P]
 ### 1.2 Your concerns:
 - Movable landmarks (Ferry)
 
-Honestly reading through the section, I don't see what other concerns your have, beside the concerns you created by your own solution(s). 
-Also I don't know what the example on Fall map has to do with the ferry problem.
-### 1.3 Solution:
+Honestly reading through the section, I don't see what other concerns you have (beside the concerns you created by your own solutions.)
+Also I don't know what your example on Fall map has to do with the Ferry problem.
+### 1.3 Movable landmarks (Ferry) Solution:
 
 Encoding the Landmark into 1 addiction column.
 You said
 > I don't want to add a data column to the clearings (the most logical place to put landmarks) since most landmarks are not movable and we'd be repeating an entire column of data for little gain
 
-But if you're to repeat the whole header, you're repeating the same data all the time too, rather than just repeating the landmark info in clearing.
+But if you're to repeat the whole header, you're repeating the same data all the time too, rather than just repeating the landmark info in clearing. 
+Also the info about which Landmark the clearing has would be important for discusion, not much different from how we encoded clearing suit into the data.
 
-A clearing 11 Fox with: **Ferry used, 2 Cats, 1 Ruin, 1 Sawmill, wood** could be encoded
+A clearing 11, Fox suit, with: **Ferry used, 2 Cats, 1 Ruin, 1 Sawmill, wood** could be encoded
 ```PHP 
-11F C2Sw MRFe
-#11F : clearing 11, Fox suit
-#C2Sw: Cat Faction: 2 warriors, Sawmill, wood token
-#MRFe: Map data: Ruin, Ferry used
+11FRFe C2Sw
 ```
-
-Here we introduce M as a collum for Map data
-symbol| meaning
+Symbol | meaning
 -|-
-M| Map column
-R| Ruin
-F| Ferry
-e| suffix indicate used object.
+11FRFe | 11: clearing 11 <br> F: Fox suit <br> R: Ruin<br> Fe: Ferry used
+C2Sw | C: Cat <br> 2: 2 warriors <br> S: Sawmill <br> w: wood token
