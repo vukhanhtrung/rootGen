@@ -6,8 +6,9 @@ So what do we gain by grouping game constants to header for multiple turns data 
 
 - Game constants we consider for simplicity: Map-name, map-suit, factions, deck, variant
 
-No header:
+
 ```PHP
+# No header:
 Turn 1:
     f ep CAPD - FMRRRFMFMRMF - - - v[DI, 3P]
     # Turn 1 Faction data
@@ -24,8 +25,9 @@ Turn 3:
 ```
 We will have to repeat the game constants with every turn saved.
 
-With header:
+
 ```PHP
+# With header:
 f ep CAPD - FMRRRFMFMRMF - - - v[DI, 3P]
 Turn 1:
     # Turn 1 Faction data
